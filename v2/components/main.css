@@ -1,0 +1,68 @@
+body {
+	background: url('images/backgrounds/MarsLandscape.jpg') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+
+
+}
+
+html, body {
+	height: 100%;
+}
+.homePageHtml {
+	height: auto;
+}
+
+img {
+    transition:transform 0.25s ease;
+}
+
+.marsPhoto {
+	border-radius: 5px;
+	padding: 5px;
+	display: inline;
+	margin-left: auto;
+	margin-right: auto;
+	width: 45%;
+}
+.imagerBox {
+		position: relative;
+	    min-height: 100vh;
+	    padding-bottom: 12vh;
+}
+
+.homePhoto {
+
+	margin-bottom: 5%;
+
+}
+
+#footer {
+    background-color: rgba(61, 61, 61, 1);
+    margin-top:5vh;
+    z-index: 1;
+}
+#footerImager {
+    background-color: rgba(61, 61, 61, 1);
+    z-index: 0;
+    bottom: 0;
+    position: absolute;
+    padding-top: 5vh;
+}
+
+@media screen and (max-width: 600px) {
+	.imagerBox {
+	    padding-bottom: 15vh;
+	}
+	.marsPhoto {
+		border-radius: 5px;
+		padding: 5px;
+		display: inline;
+		margin-left: auto;
+		margin-right: auto;
+		width: 75%;
+	}
+}

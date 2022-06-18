@@ -1,0 +1,38 @@
+body {
+	background: url('images/backgrounds/MarsLandscape.jpg') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+}
+
+html, body {
+	height: 100%;
+}
+.homePageHtml {
+	height: auto;
+}
+
+img {
+    transition:transform 0.25s ease;
+}
+
+.marsphoto {
+	border-radius: 5px;
+	padding: 5px;
+	display: inline;
+	margin-left: auto;
+	margin-right: auto;
+	width: 45%;
+}
+
+.homePhoto {
+
+	margin-bottom: 5%;
+
+}
+
+#footer {
+    background-color: rgba(61, 61, 61, 1);
+}
