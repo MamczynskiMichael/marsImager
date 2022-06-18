@@ -4,7 +4,7 @@ function validateUser()
     try {
 
         $url = 'https://www.google.com/recaptcha/api/siteverify';
-        $data = ['secret'   => '6LcueQogAAAAAHOqCVgxuvxUrJcxSfoUOaL1VKi-',
+        $data = ['secret'   => 'SECRET KEY',
                  'response' => $_POST['g-recaptcha-response'],
                  'remoteip' => $_SERVER['REMOTE_ADDR']];
                  
