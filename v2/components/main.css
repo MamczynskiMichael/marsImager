@@ -27,6 +27,9 @@ img {
 	margin-left: auto;
 	margin-right: auto;
 	width: 45%;
+    max-height: 500px;
+    max-width: 500px;
+
 }
 .imagerBox {
 		position: relative;
@@ -39,18 +42,112 @@ img {
 	margin-bottom: 5%;
 
 }
+#roverForm .form-check .form-check-input {
+	float: none;
+}
+
+
+
+.gg-arrow-up {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 22px;
+    height: 22px
+}
+.gg-arrow-up::after,
+.gg-arrow-up::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    top: 4px
+}
+.gg-arrow-up::after {
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid;
+    border-left: 2px solid;
+    transform: rotate(45deg);
+    left: 7px
+}
+.gg-arrow-up::before {
+    width: 2px;
+    height: 16px;
+    left: 10px;
+    background: currentColor
+}
+
+
 
 #footer {
-    background-color: rgba(61, 61, 61, 1);
+
     margin-top:5vh;
     z-index: 1;
 }
 #footerImager {
     background-color: rgba(61, 61, 61, 1);
     z-index: 0;
-    bottom: 0;
+    bottom: -50px;
     position: absolute;
-    padding-top: 5vh;
+
+}
+
+#btn-back-to-top {
+	position: fixed;
+	bottom: 20px;
+	right: 5px;
+	display: none;
+}
+
+.parallaxImg1{
+	background-image: url("/components/images/general/sizeCompRovers.jpg");
+	background-position: 25% !important;
+}
+.parallaxImg2{
+	background-image: url("/components/images/general/curiosity.jpg");
+
+}
+.parallaxImg3{
+	background-image: url("/components/images/general/opportunityAndSpirit.jpg");
+	background-position: 70% 500px !important;
+
+}
+
+.parralaxContainer {
+	position: relative;
+}
+
+.parallax {
+	min-height: 50vh; 
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+.parrallaxText {
+	position: absolute;
+	right: 0.75rem;
+    left: 0.75rem;
+	top: 35%;
+	color: white;
+	background-color: rgba(62, 60, 60, .9);
+}
+
+.parallaxDivider {
+	background-color: rgba(62, 60, 60);
+	min-height: 5vh;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media screen and (max-width: 769px) {
+	.parallaxImg1{
+		background-size: 100% 100%, cover !important;
+	}
 }
 
 @media screen and (max-width: 600px) {
@@ -65,4 +162,19 @@ img {
 		margin-right: auto;
 		width: 75%;
 	}
+	.parrallaxText{
+		position: static ;
+	}
+	.parallaxImg1{
+		background-attachment: scroll;
+		background-size: 150% !important;
+	}
+	.parallaxImg2{
+		background-position: 60%;
+	}
+	.parallaxImg3{
+		background-position: 50% -20px !important;
+	}
+}
+
 }

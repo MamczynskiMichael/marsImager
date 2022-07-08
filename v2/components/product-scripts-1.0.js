@@ -1,3 +1,5 @@
+
+
 function writeCookie(set, value) {
 	document.cookie = "radio"+set+"="+value+";max-age=3600;path=/;SameSite=Strict";
 }

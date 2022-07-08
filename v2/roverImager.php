@@ -18,6 +18,7 @@ include('php/general-functions-1.0.php');
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-CFCNFKJV69"></script>
 	<script src="components/google-scripts-1.0.js"></script>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+
 </head>
 <body onLoad="setCookies()">
 	<nav class="navbar navbar-light bg-white ">
@@ -34,14 +35,13 @@ include('php/general-functions-1.0.php');
 	   		</li>
 		</ul>
 	</nav>
-<!-- h-100-->
-	<div class="container bg-light imagerBox">
+
+	<div class="container bg-light imagerBox text-center">
 		<div class="row">
-			<div class="col">
 				<form id="roverForm" method="post" action="php/form-handler-1.0.php">
 					<h1 class="fs-1">Select a date</h1>
 					<input type="date" id="searchDay" name="searchDay" <?php echo 'value="'.$controller->getSearchDay().'"'; ?>>
-					<p class="fs-5 m-0">Rover | (Last active date)</p>
+					<p class="fs-5 m-1 mb-0 bg-info rounded-pill">Rover | (Last active date)</p>
 					<div class="form-check">
 						<input type="radio" id="rover1" class="form-check-input" name="rover" value="Curiosity" checked >
 						<label class="form-check-label" for="rover1" id="label1" >Curiosity | <a href="homePage.php#Cur">(Aug 6, 2012 to Now)</a></label>
@@ -54,19 +54,17 @@ include('php/general-functions-1.0.php');
 						<input type="radio" id="rover3" class="form-check-input" name="rover" value="Spirit">
 						<label class="form-check-label" for="rover3" >Spirit | <a href="homePage.php#SpOp">(Jan 4, 2004 to Mar 21, 2010)</a></label>
 					</div>
-					<button type="submit" class="btn btn-primary mt-1" id="submit">Submit</button>
-				
-
-			</div>
-			<div class="col">
-					<?php
-
-						displayCameraRadio($controller->getRoverType());
-					
-					?>
-			</div>
-			</form>	
+					<button type="submit" class="btn btn-primary mt-1" id="submit">Search</button>		
+				</form>
+			
 		</div>
+
+				<?php
+
+					displayCameraRadio($controller->getRoverType());
+				
+				?>
+		
 		<hr>
 		<div class="row">
 			<?php 
@@ -81,9 +79,13 @@ include('php/general-functions-1.0.php');
 				</div>
 			</footer>
 		</div>
-
 	</div>
 
+	<button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+	  <i class="gg-arrow-up"></i>
+	</button>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	<script src="components/lowerproduct-scripts-1.0.js"></script>
 	<script type="text/javascript">
  	const observer = lozad(); // lazy loads elements with default selector as '.lozad'
