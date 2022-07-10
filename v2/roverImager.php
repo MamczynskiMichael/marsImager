@@ -55,16 +55,16 @@ include('php/general-functions-1.0.php');
 						<label class="form-check-label" for="rover3" >Spirit | <a href="homePage.php#SpOp">(Jan 4, 2004 to Mar 21, 2010)</a></label>
 					</div>
 					<button type="submit" class="btn btn-primary mt-1" id="submit">Search</button>		
+						<?php
+
+							displayCameraRadio($controller->getRoverType());
+						
+						?>
 				</form>
 			
 		</div>
 
-				<?php
 
-					displayCameraRadio($controller->getRoverType());
-				
-				?>
-		
 		<hr>
 		<div class="row">
 			<?php 

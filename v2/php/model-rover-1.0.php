@@ -47,7 +47,9 @@ class ClassModelRover
 
 	public function roverPhotoData(){
 		if (!empty($this->searchDay)&&!empty($this->roverType )) {
+			
 			$jsonMarsPhotos = file_get_contents("https://api.nasa.gov/mars-photos/api/v1/rovers/".$this->roverType."/photos?earth_date=".$this->searchDay."&api_key=QWTvKdaG5yRILqVHFtVQnBr8nItlBSiEevgwmyfZ");
+
 			$photoData = json_decode($jsonMarsPhotos,true);
 
 			if (isset($photoData["photos"][0]["img_src"])) {

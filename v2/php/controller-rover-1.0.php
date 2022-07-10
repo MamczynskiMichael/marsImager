@@ -70,7 +70,7 @@ class ClassControllerRover
 	public function printRoverAPI(){
 		$model = new ClassModelRover();
 		$view = new ClassViewRover();
-
+		
 		$view->displayRoverImg($model->roverPhotoData(),$model->getTotalImg());
 		$view->displayRoverIncr($model->incrementImages());
 

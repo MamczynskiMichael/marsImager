@@ -33,7 +33,7 @@ function displayCameraRadio ($rT){
 
 
 	  
-	  <button type="button" class="btn btn-info mt-2" data-bs-toggle="modal" data-bs-target="#submitPostModal">Filter by camera</button>
+	  <button type="button" class="btn btn-info mt-1" data-bs-toggle="modal" data-bs-target="#submitPostModal">Filter by camera</button>
 
 	  <div class="modal fade" id="submitPostModal" tabindex="-1" role="dialog" aria-labelledby="submitPostModalLabel" aria-hidden="true">
 	      <div class="modal-dialog" role="document">
@@ -42,7 +42,7 @@ function displayCameraRadio ($rT){
 	            <h5 class="modal-title" id="submitPostModalLabel">Available cameras</h5>
 	            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 	          </div>
-	          <form action="php/form-handler-1.0.php" method="POST" enctype="multipart/form-data">
+	          
 	          <div class="modal-body text-start">
 	             <div class="form-check">
 	               <input class="form-check-input" type="radio" name="camera" id="roverCamAll" value="all" checked>
@@ -69,8 +69,8 @@ function displayCameraRadio ($rT){
 	          </div>         
 	          <div class="modal-footer">
 	            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-	            <button class="btn btn-primary" type="submit" name="submit">Filter</button>
-	          </form>
+	            <button class="btn btn-primary" type="submit" id="submit">Filter</button>
+	          
 	        </div>
 	      </div>
 	    </div>
